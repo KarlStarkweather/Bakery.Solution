@@ -12,6 +12,8 @@ namespace Bakery.Models
     public Bread(int quant)
     {
       Quantity = quant;
+      Price = PriceStructure[Quantity];
+
     }
 
     private static Dictionary<int, int> PriceStructure = new Dictionary<int, int>()
