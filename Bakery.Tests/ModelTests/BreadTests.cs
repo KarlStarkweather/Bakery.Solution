@@ -17,6 +17,16 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Bread),breadOrder.GetType());
     }
 
+    [TestMethod]
+    public void BreadConstructor_AssignQuantOfBread_3()
+    {
+      //Arrange
+      int quantity = 3;
+      //Act
+      Bread breadOrder = new Bread(quantity);
+      //Assert
+      Assert.AreEqual(breadOrder.Quantity,3);
+    }
 
   }
 }
