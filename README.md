@@ -16,7 +16,10 @@
 
 #### MVP Objective
 
-This console application will prompt the user for a bread and pastry order. It will then calculate and display the order total.
+This console application will prompt the user for a bread and pastry order. It will then calculate and display the order total. There are quantity price discounts for both Bread and Pastry as follows:
+Bread: buy 1 for $5, buy 2 and get one free
+Pastry: buy 1 for $2, or 3 for $5
+Calculate discounts for any size order.
 
 ### User Interface
 
