@@ -12,7 +12,17 @@ namespace Bakery.Models
     public Bread(int quant)
     {
       Quantity = quant;
-      Price = PriceStructure[Quantity];
+      if (quant>PriceStructure.Count)
+      {
+        int dealRemainder = quant % PriceStructure.Count;
+        int dealBase = quant - dealRemainder;
+        Price = PriceStructure[dealBase];
+        Price += PriceStructure[dealRemainder];  
+      }
+      else
+      {
+        Price = PriceStructure[Quantity];
+      }
 
     }
 
