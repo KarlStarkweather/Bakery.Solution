@@ -29,7 +29,7 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void BreadConstructor_CalculateOrder_3()
+    public void BreadConstructor_CalculateOrder_5()
     {
       //Arrange
       int quantity = 1;
@@ -39,6 +39,16 @@ namespace Bakery.Tests
       Assert.AreEqual(breadOrder.Price,5);
     }
 
+[TestMethod]
+    public void BreadConstructor_CalculateOrder_10()
+    {
+      //Arrange
+      int quantity = 3;
+      //Act
+      Bread breadOrder = new Bread(quantity);
+      //Assert
+      Assert.AreEqual(breadOrder.Price,10);
+    }
   }
 }
 
