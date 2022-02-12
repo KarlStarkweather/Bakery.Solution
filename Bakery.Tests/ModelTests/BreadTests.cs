@@ -61,6 +61,17 @@ namespace Bakery.Tests
       Assert.AreEqual(breadOrder.Price,20);
     }
 
+    [TestMethod]
+    public void BreadConstructor_CalculateOrderOf7_25()
+    {
+      //Arrange
+      int quantity = 7;
+      //Act
+      Bread breadOrder = new Bread(quantity);
+      //Assert
+      Assert.AreEqual(breadOrder.Price,25);
+    }
+
   }
 }
 

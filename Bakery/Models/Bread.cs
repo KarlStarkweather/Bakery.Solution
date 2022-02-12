@@ -14,9 +14,10 @@ namespace Bakery.Models
       Quantity = quant;
       if (quant>PriceStructure.Count)
       {
-        int dealRemainder = quant % PriceStructure.Count;
-        int dealBase = quant - dealRemainder;
-        Price = PriceStructure[dealBase];
+        int max = PriceStructure.Count;
+        int dealRemainder = quant % max;
+        int dealBaseMultiplier = (quant - dealRemainder) / max;
+        Price = PriceStructure[max] * dealBaseMultiplier;
         Price += PriceStructure[dealRemainder];  
       }
       else
