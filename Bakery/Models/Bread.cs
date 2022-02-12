@@ -6,9 +6,12 @@ namespace Bakery.Models
 
   public class Bread
   {
-    public Bread()
-    {
+    public int Quantity{get; set; }
+    public int Price{get; set; }
 
+    public Bread(int quant)
+    {
+      Quantity = quant;
     }
 
     private static Dictionary<int, int> PriceStructure = new Dictionary<int, int>()
