@@ -83,6 +83,17 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Pastry),pastryOrder.GetType());
     }
 
+    [TestMethod]
+    public void PastryConstructor_CalculateOrderOf5_9()
+    {
+      //Arrange
+      int quantity = 5;
+      //Act
+      Pastry pastryOrder = new Pastry(quantity);
+      //Assert
+      Assert.AreEqual(pastryOrder.Price,9);
+    }
+
   }
 }
 
