@@ -12,9 +12,9 @@ namespace Bakery.Models
     public Pastry(int quant)
     {
       Quantity = quant;
-      if (quant>PriceStructure.Count)
+      if (quant>(PriceStructure.Count-1))
       {
-        int max = PriceStructure.Count;
+        int max = PriceStructure.Count-1;
         int dealRemainder = quant % max;
         int dealBaseMultiplier = (quant - dealRemainder) / max;
         Price = PriceStructure[max] * dealBaseMultiplier;
@@ -29,6 +29,7 @@ namespace Bakery.Models
 
     private static Dictionary<int, int> PriceStructure = new Dictionary<int, int>()
     {
+      {0, 0},
       {1, 2},
       {2, 4},
       {3, 5}
