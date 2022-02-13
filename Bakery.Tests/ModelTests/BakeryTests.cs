@@ -72,6 +72,17 @@ namespace Bakery.Tests
       Assert.AreEqual(breadOrder.Price,25);
     }
 
+    [TestMethod]
+    public void PastryConstructor_CreateInstanceOfPastry_Pastry()
+    {
+      //Arrange
+      int quantity = 3;
+      //Act
+      Pastry pastryOrder = new Pastry(quantity);
+      //Assert
+      Assert.AreEqual(typeof(Pastry),pastryOrder.GetType());
+    }
+
   }
 }
 
