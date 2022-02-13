@@ -94,6 +94,17 @@ namespace Bakery.Tests
       Assert.AreEqual(pastryOrder.Price,9);
     }
 
+    [TestMethod]
+    public void PastryConstructor_CalculateOrderOf7_12()
+    {
+      //Arrange
+      int quantity = 7;
+      //Act
+      Pastry pastryOrder = new Pastry(quantity);
+      //Assert
+      Assert.AreEqual(pastryOrder.Price,12);
+    }
+
   }
 }
 
