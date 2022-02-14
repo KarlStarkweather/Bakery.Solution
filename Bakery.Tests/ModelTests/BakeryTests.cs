@@ -36,7 +36,7 @@ namespace Bakery.Tests
       //Act
       Bread breadOrder = new Bread(quantity);
       //Assert
-      Assert.AreEqual(breadOrder.Price,5);
+      Assert.AreEqual(breadOrder.GetPrice(),5);
     }
 
     [TestMethod]
@@ -47,7 +47,7 @@ namespace Bakery.Tests
       //Act
       Bread breadOrder = new Bread(quantity);
       //Assert
-      Assert.AreEqual(breadOrder.Price,10);
+      Assert.AreEqual(breadOrder.GetPrice(),10);
     }
       
     [TestMethod]
@@ -58,7 +58,7 @@ namespace Bakery.Tests
       //Act
       Bread breadOrder = new Bread(quantity);
       //Assert
-      Assert.AreEqual(breadOrder.Price,20);
+      Assert.AreEqual(breadOrder.GetPrice(),20);
     }
 
     [TestMethod]
@@ -69,7 +69,7 @@ namespace Bakery.Tests
       //Act
       Bread breadOrder = new Bread(quantity);
       //Assert
-      Assert.AreEqual(breadOrder.Price,25);
+      Assert.AreEqual(breadOrder.GetPrice(),25);
     }
 
     [TestMethod]
@@ -91,7 +91,7 @@ namespace Bakery.Tests
       //Act
       Pastry pastryOrder = new Pastry(quantity);
       //Assert
-      Assert.AreEqual(pastryOrder.Price,9);
+      Assert.AreEqual(pastryOrder.GetPrice(),9);
     }
 
     [TestMethod]
@@ -102,7 +102,7 @@ namespace Bakery.Tests
       //Act
       Pastry pastryOrder = new Pastry(quantity);
       //Assert
-      Assert.AreEqual(pastryOrder.Price,12);
+      Assert.AreEqual(pastryOrder.GetPrice(),12);
     }
 
   }

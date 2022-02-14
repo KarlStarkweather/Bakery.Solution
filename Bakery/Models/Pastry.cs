@@ -1,35 +1,24 @@
-using System;
 using System.Collections.Generic;
 
 namespace Bakery.Models
 {
 
-  public class Pastry
+  public class Pastry : Inventory
   {
     public int Quantity{get; set; }
-    public int Price{get; set; }
-
+ 
     public Pastry(int quant)
     {
       Quantity = quant;
-      if (quant>(PriceStructure.Count-1))
-      {
-        int max = PriceStructure.Count-1;
-        int dealRemainder = quant % max;
-        int dealBaseMultiplier = (quant - dealRemainder) / max;
-        Price = PriceStructure[max] * dealBaseMultiplier;
-        Price += PriceStructure[dealRemainder];  
-      }
-      else
-      {
-        Price = PriceStructure[Quantity];
-      }
-
     }
 
-    private static Dictionary<int, int> PriceStructure = new Dictionary<int, int>()
+    public double GetPrice()
     {
-      {0, 0},
+      return TieredPrice(Quantity, PriceStructure);
+    }
+
+    private static Dictionary<int, double> PriceStructure = new Dictionary<int, double>()
+    {
       {1, 2},
       {2, 4},
       {3, 5}

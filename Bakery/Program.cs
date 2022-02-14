@@ -14,10 +14,12 @@ namespace Bakery
       Console.WriteLine("Enter the number of Pastries you want to order:");
       int qPastry = Convert.ToInt32(Console.ReadLine());
       Pastry pastryOrder = new Pastry(qPastry);
+      double pPastry = pastryOrder.GetPrice();
+      double pBread = breadOrder.GetPrice();
       Console.WriteLine("OK I think I've got it.");
-      Console.WriteLine("That's " + qBread + " loaves of bread for $" + breadOrder.Price);
-      Console.WriteLine("and " + qPastry + " pastries for $" + pastryOrder.Price);
-      Console.WriteLine("for a total of: $" + (breadOrder.Price + pastryOrder.Price));    
+      Console.WriteLine("That's " + qBread + " loaves of bread for $" + pBread);
+      Console.WriteLine("and " + qPastry + " pastries for $" + pPastry);
+      Console.WriteLine("for a total of: $" + (pBread + pPastry));    
     }
   }
 }
