@@ -2,10 +2,15 @@ using System.Collections.Generic;
 
 namespace Bakery.Models
 {
-
   public class Bread : Inventory
   {
     public int Quantity{get; set; }
+    private static Dictionary<int, double> _priceStructure = new Dictionary<int, double>()
+    {
+      {1, 5},
+      {2, 10},
+      {3, 10}
+    };
  
     public Bread(int quant)
     {
@@ -14,15 +19,7 @@ namespace Bakery.Models
     
     public double GetPrice()
     {
-      return TieredPrice(Quantity, PriceStructure);
+      return TieredPrice(Quantity, _priceStructure);
     }
-
-    private static Dictionary<int, double> PriceStructure = new Dictionary<int, double>()
-    {
-      {1, 5},
-      {2, 10},
-      {3, 10}
-    };
-
   }
 }
